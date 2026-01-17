@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { useAccount } from "wagmi";
 import { GreetingList } from "./components/GreetingList";
 import { GreetingForm } from "./components/GreetingForm";
 import { HistoryPage } from "./components/HistoryPage";
@@ -12,7 +11,6 @@ type PageType = "home" | "history" | "docs";
  * Main App Component - Minimalist Design with Pages
  */
 function App() {
-  const { isConnected } = useAccount();
   const [currentPage, setCurrentPage] = useState<PageType>("home");
 
   return (
